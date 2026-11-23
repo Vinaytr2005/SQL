@@ -36,7 +36,7 @@ inner join degree_programs dp
 on dp.program_id=l.program_id
 group by dp.program_name
 having count(distinct l.learner_id)>=1
-order by total_learners desc
+order by total_learners desc;
 
 
 /*
@@ -85,7 +85,7 @@ from learners l
 inner join degree_programs dp
 on dp.program_id=l.program_id
 where l.first_name like '%a%'
-order by full_name asc
+order by full_name asc;
 
 
 
@@ -137,7 +137,7 @@ from learners l
 inner join degree_programs dp
 on dp.program_id=l.program_id
 where l.last_name like '%s%'
-order by l.last_name asc
+order by l.last_name asc;
 
 
 /*
@@ -180,4 +180,4 @@ select
 	'Instructor' as person_type
 from instructors i
 where i.instructor_name like '%a%'
-order by person_name asc
+order by person_name asc;
